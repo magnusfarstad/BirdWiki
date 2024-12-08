@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "BirdWiki",
-    "slug": "BirdWiki",
+    "name": "Bird Wiki",
+    "slug": "bird-wiki",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "bird-wiki",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

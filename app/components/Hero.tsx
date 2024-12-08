@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         padding: 16,
     },
     header: {
-        fontSize: 32,
+        fontSize: 64,
         fontWeight: 'bold',
         fontFamily: 'Inter_900Black',
     },

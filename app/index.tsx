@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
 import Hero from "@/components/Hero";
 
@@ -12,6 +13,7 @@ export default function Index() {
       }}
     >
       <Hero imgSource={hero} label="Vendehals" subHeader="bird of the day" />
+      <Link href="/wiki/home">Wiki</Link>
     </View>
   );
 }
