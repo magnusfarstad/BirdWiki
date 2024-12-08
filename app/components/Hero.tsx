@@ -1,7 +1,6 @@
 import { Image, type ImageSource } from "expo-image";
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
 
-
 type Props = {
     imgSource: ImageSource,
     label: string,
@@ -14,8 +13,8 @@ export default function Hero ({ imgSource, label, subHeader }: Props) {
             source={imgSource}
             style={styles.image} >
                 <View style={styles.headers}>
-                    <Text style={styles.subHeader}>{subHeader}</Text>
-                    <Text style={styles.header}>{label}</Text>
+                    <Text style={[styles.subHeader, styles.text]}>{subHeader}</Text>
+                    <Text style={[styles.header, styles.text]}>{label}</Text>
                 </View>
         </ImageBackground>
     );
@@ -35,10 +34,13 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 32,
         fontWeight: 'bold',
-        color: 'white'
+        fontFamily: 'Inter_900Black',
     },
     subHeader: {
         fontSize: 12,
-        color: 'white',
+    },
+    text: {
+        color: "white",
+        fontFamily: 'Inter',
     }
 })
