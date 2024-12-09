@@ -1,12 +1,43 @@
 import { Text, View, StyleSheet, ScrollView, StatusBar } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { useState } from "react";
 
 import Hero from "@/components/Hero";
-import WikiLi from "../components/WikiLi";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import WikiLi from "@/components/WikiLi";
+import { SearchBar } from "@rneui/themed";
 
 const hero = require("@/assets/images/vendehals.jpg");
+const birdData = require("@/assets/json/birds.json");
+
+type Bird = {
+  commonName: string;
+  speciesName: string;
+  scientificName: string;
+  description: string;
+  imageLink: string;
+  averageWeightGrams: number;
+  wingspanCm: number;
+  averageLifespanYears: number;
+};
+
 
 export default function WikiHome() {
+  // Search functionality
+  const [query, setQuery] = useState('');
+  const [filteredBirds, setFilteredBirds] = useState(birdData.birds);
+  
+  const handleSearch = (query: string) => {
+    setQuery(query);
+    filterBirds(query);
+  };
+
+  const filterBirds = (searchQuery: string) => {
+    setFilteredBirds(
+      birdData.birds.filter((bird: { commonName: string; }) =>
+        bird.commonName.toLowerCase().includes(searchQuery.toLowerCase()))
+    );
+  };
+
   return (
     <View
       style={{
@@ -17,13 +48,17 @@ export default function WikiHome() {
       <SafeAreaProvider>
         <SafeAreaView style={styles.container} edges={['top']}>
           <ScrollView style={styles.scrollView}>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
-            <WikiLi imgSource={hero} bird="Vendehals" latin="Eurasion eursaion"></WikiLi>
+          <SearchBar
+              placeholder="Search birds..."
+              onChangeText={handleSearch}
+              value={query}
+              lightTheme
+              containerStyle={styles.searchBar}
+              platform="default"
+            />
+            {filteredBirds.map((bird: Bird, index: number) => (
+              <WikiLi bird={bird}></WikiLi>
+            ))}
           </ScrollView>
         </SafeAreaView>
       </SafeAreaProvider>
@@ -43,4 +78,7 @@ const styles = StyleSheet.create({
     fontSize: 42,
     padding: 12,
   },
+  searchBar: {
+    //
+  }
 });
