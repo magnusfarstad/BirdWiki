@@ -26,21 +26,21 @@ const styles = StyleSheet.create({
         height: 300,
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        boxShadow: '0 4px 2px -2px white',
     },
     headers: {
+        backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1))",
         padding: 16,
     },
     header: {
-        fontSize: 64,
-        fontWeight: 'bold',
+        fontSize: 48,
         fontFamily: 'Inter_900Black',
     },
     subHeader: {
-        fontSize: 12,
+        fontSize: 24,
+        fontFamily: 'Inter_800ExtraBold',
     },
     text: {
-        color: "white",
-        fontFamily: 'Inter',
+        color: "#0e1111",
+        //fontFamily: 'Inter',
     }
 })
