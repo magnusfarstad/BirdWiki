@@ -8,6 +8,7 @@ import birdData from "@/assets/json/birds.json";
 
 type Props = {
     bird: {
+        id: number;
         commonName: string;
         speciesName: string;
         scientificName: string;
@@ -19,19 +20,19 @@ type Props = {
     };
 }
 
+
 export default function WikiLi ({ bird }: Props) {
     return (
         <Pressable style={{ flex: 1 }}>
             <Link href="./{bird.commonName}" style={styles.listEntry}>
-                <ImageBackground source={bird.imageLink} style={styles.image}></ImageBackground>
+                <ImageBackground 
+                    source={{ uri: bird.imageLink }} 
+                    style={styles.image}>
+                </ImageBackground>
                 <View style={styles.birdTitleContainer}>
-                    <Text style={styles.birdTitle}>{bird.commonName}
-                        <Text style={{ 
-                            fontSize: 24,
-                            fontWeight: "normal",
-                            fontStyle: "italic",
-                            marginLeft: 8, }}>{bird.scientificName}</Text>
+                    <Text style={[styles.birdTitle, styles.text]}>{bird.commonName}
                     </Text>
+                    <Text style={[styles.scientificName, styles.text]}>{bird.scientificName}</Text>
                 </View>
             </Link>
         </Pressable>
@@ -40,27 +41,39 @@ export default function WikiLi ({ bird }: Props) {
 
 const styles = StyleSheet.create({
     listEntry: {
+        display: "flex",
         flex: 1,
         flexDirection: 'row',
-        borderBottomLeftRadius: 32,
-        borderTopRightRadius: 32,
+        alignContent: "center",
         margin: 8,
         backgroundColor: "white",
         overflow: "hidden",
-        borderWidth: 4,
+        borderWidth: 3,
+        borderStyle: "dotted",
         borderColor: "gray",
     },
     image: {
-        flex: 0.3,
+        flex: 1,
+        width: "100%",
+        height: "100%",
     },
     birdTitleContainer: {
-        flex: 0.7,
+        flex: 3,
         paddingLeft: 8,
-        padding: 32,
+        padding: 24,
     },
     birdTitle: {
-        fontSize: 32,
+        fontSize: 24,
         color: "#0e1111",
         fontWeight: "bold",
     },
+    scientificName: { 
+        fontSize: 16,
+        fontWeight: "normal",
+        fontStyle: "italic",
+        color: "#808080",
+    },
+    text: {
+        color: "rgb(60, 60, 60)",
+    }
 })

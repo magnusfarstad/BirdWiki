@@ -3,7 +3,7 @@ import { Link } from "expo-router";
 
 import Hero from "@/components/Hero";
 
-const hero = require("@/assets/images/vendehals2.jpg");
+const hero = require("@/assets/images/birds/vendehals2.jpg");
 
 export default function Index() {
   return (

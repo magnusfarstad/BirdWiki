@@ -1,5 +1,6 @@
 import { Image, type ImageSource } from "expo-image";
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
 
 type Props = {
     imgSource: ImageSource,
@@ -12,10 +13,13 @@ export default function Hero ({ imgSource, label, subHeader }: Props) {
         <ImageBackground 
             source={imgSource}
             style={styles.image} >
-                <View style={styles.headers}>
+                <LinearGradient 
+                    colors={["transparent", "white"]}
+                    style={styles.headers}
+                >
                     <Text style={[styles.subHeader, styles.text]}>{subHeader}</Text>
                     <Text style={[styles.header, styles.text]}>{label}</Text>
-                </View>
+                </LinearGradient>
         </ImageBackground>
     );
 }
@@ -28,7 +32,6 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     headers: {
-        backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1))",
         padding: 16,
     },
     header: {
@@ -40,7 +43,6 @@ const styles = StyleSheet.create({
         fontFamily: 'Inter_800ExtraBold',
     },
     text: {
-        color: "#0e1111",
-        //fontFamily: 'Inter',
+        color: "rgb(60, 60, 60)",
     }
 })

@@ -6,10 +6,11 @@ import Hero from "@/components/Hero";
 import WikiLi from "@/components/WikiLi";
 import { SearchBar } from "@rneui/themed";
 
-const hero = require("@/assets/images/vendehals.jpg");
+const hero = require("@/assets/images/birds/vendehals.jpg");
 const birdData = require("@/assets/json/birds.json");
 
 type Bird = {
+  id: number;
   commonName: string;
   speciesName: string;
   scientificName: string;
@@ -54,10 +55,11 @@ export default function WikiHome() {
               value={query}
               lightTheme
               containerStyle={styles.searchBar}
+              inputContainerStyle={{padding: 12, backgroundColor: "transparent"}}
               platform="default"
             />
             {filteredBirds.map((bird: Bird, index: number) => (
-              <WikiLi bird={bird}></WikiLi>
+              <WikiLi bird={bird} key={bird.id}></WikiLi>
             ))}
           </ScrollView>
         </SafeAreaView>
@@ -79,6 +81,9 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   searchBar: {
-    //
+    backgroundColor: "white",
+    padding: 12,
+    borderBottomWidth: 0,
+    borderTopWidth: 0,
   }
 });

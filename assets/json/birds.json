@@ -1,94 +1,14 @@
 {
     "birds": [
       {
-        "commonName": "Bald Eagle",
-        "scientificName": "Haliaeetus leucocephalus",
-        "description": "A large bird of prey found in North America, known for its white head and tail contrasting with its dark brown body and wings.",
-        "imageLink": "https://example.com/images/bald_eagle.jpg",
-        "averageWeightGrams": 4500,
-        "wingspanCm": 200,
-        "averageLifespanYears": 20
-      },
-      {
+        "id": 1,
         "commonName": "Peregrine Falcon",
         "scientificName": "Falco peregrinus",
         "description": "The fastest bird in the world, capable of reaching speeds over 240 mph during its hunting stoop.",
-        "imageLink": "https://example.com/images/peregrine_falcon.jpg",
+        "imageLink": "https://i.imgur.com/WaTTYXJ.jpeg",
         "averageWeightGrams": 900,
         "wingspanCm": 100,
         "averageLifespanYears": 15
-      },
-      {
-        "commonName": "Scarlet Macaw",
-        "scientificName": "Ara macao",
-        "description": "A vibrant and colorful parrot native to Central and South American rainforests.",
-        "imageLink": "https://example.com/images/scarlet_macaw.jpg",
-        "averageWeightGrams": 1000,
-        "wingspanCm": 110,
-        "averageLifespanYears": 40
-      },
-      {
-        "commonName": "Emperor Penguin",
-        "scientificName": "Aptenodytes forsteri",
-        "description": "The largest of all penguin species, known for its extraordinary endurance in Antarctic winters.",
-        "imageLink": "https://example.com/images/emperor_penguin.jpg",
-        "averageWeightGrams": 30000,
-        "wingspanCm": 100,
-        "averageLifespanYears": 20
-      },
-      {
-        "commonName": "European Robin",
-        "scientificName": "Erithacus rubecula",
-        "description": "A small insectivorous bird known for its bright orange breast and melodious song.",
-        "imageLink": "https://example.com/images/european_robin.jpg",
-        "averageWeightGrams": 20,
-        "wingspanCm": 22,
-        "averageLifespanYears": 2
-      },
-      {
-        "commonName": "Great Horned Owl",
-        "scientificName": "Bubo virginianus",
-        "description": "A powerful predator with prominent ear tufts and a deep hooting call, native to the Americas.",
-        "imageLink": "https://example.com/images/great_horned_owl.jpg",
-        "averageWeightGrams": 1500,
-        "wingspanCm": 140,
-        "averageLifespanYears": 13
-      },
-      {
-        "commonName": "Kingfisher",
-        "scientificName": "Alcedo atthis",
-        "description": "A small, brightly colored bird with a sharp beak, often found near rivers and streams.",
-        "imageLink": "https://example.com/images/kingfisher.jpg",
-        "averageWeightGrams": 40,
-        "wingspanCm": 25,
-        "averageLifespanYears": 4
-      },
-      {
-        "commonName": "Golden Pheasant",
-        "scientificName": "Chrysolophus pictus",
-        "description": "A bird with striking golden, red, and green plumage, native to forests in mountainous areas of western China.",
-        "imageLink": "https://example.com/images/golden_pheasant.jpg",
-        "averageWeightGrams": 900,
-        "wingspanCm": 70,
-        "averageLifespanYears": 6
-      },
-      {
-        "commonName": "Snowy Owl",
-        "scientificName": "Bubo scandiacus",
-        "description": "A large white owl native to Arctic regions, with striking yellow eyes and a silent flight.",
-        "imageLink": "https://example.com/images/snowy_owl.jpg",
-        "averageWeightGrams": 2000,
-        "wingspanCm": 150,
-        "averageLifespanYears": 10
-      },
-      {
-        "commonName": "Atlantic Puffin",
-        "scientificName": "Fratercula arctica",
-        "description": "A seabird with a colorful beak, known for its ability to swim underwater and nest in coastal cliffs.",
-        "imageLink": "https://example.com/images/atlantic_puffin.jpg",
-        "averageWeightGrams": 500,
-        "wingspanCm": 60,
-        "averageLifespanYears": 20
       }
     ]
 }
