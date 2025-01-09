@@ -21,12 +21,12 @@ type Props = {
 }
 
 
-export default function WikiLi ({ bird }: Props) {
+export default function WikiLi({ bird }: Props) {
     return (
         <Pressable style={{ flex: 1 }}>
             <Link href="./{bird.commonName}" style={styles.listEntry}>
-                <ImageBackground 
-                    source={{ uri: bird.imageLink }} 
+                <ImageBackground
+                    source={{ uri: bird.imageLink }}
                     style={styles.image}>
                 </ImageBackground>
                 <View style={styles.birdTitleContainer}>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         color: "#0e1111",
         fontWeight: "bold",
     },
-    scientificName: { 
+    scientificName: {
         fontSize: 16,
         fontWeight: "normal",
         fontStyle: "italic",

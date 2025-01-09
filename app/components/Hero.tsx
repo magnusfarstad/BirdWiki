@@ -8,18 +8,18 @@ type Props = {
     subHeader?: string,
 }
 
-export default function Hero ({ imgSource, label, subHeader }: Props) {
+export default function Hero({ imgSource, label, subHeader }: Props) {
     return (
-        <ImageBackground 
+        <ImageBackground
             source={imgSource}
             style={styles.image} >
-                <LinearGradient 
-                    colors={["transparent", "white"]}
-                    style={styles.headers}
-                >
-                    <Text style={[styles.subHeader, styles.text]}>{subHeader}</Text>
-                    <Text style={[styles.header, styles.text]}>{label}</Text>
-                </LinearGradient>
+            <LinearGradient
+                colors={["transparent", "white"]}
+                style={styles.headers}
+            >
+                <Text style={[styles.subHeader, styles.text]}>{subHeader}</Text>
+                <Text style={[styles.header, styles.text]}>{label}</Text>
+            </LinearGradient>
         </ImageBackground>
     );
 }

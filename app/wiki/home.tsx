@@ -26,7 +26,7 @@ export default function WikiHome() {
   // Search functionality
   const [query, setQuery] = useState('');
   const [filteredBirds, setFilteredBirds] = useState(birdData.birds);
-  
+
   const handleSearch = (query: string) => {
     setQuery(query);
     filterBirds(query);
@@ -49,17 +49,17 @@ export default function WikiHome() {
       <SafeAreaProvider>
         <SafeAreaView style={styles.container} edges={['top']}>
           <ScrollView style={styles.scrollView}>
-          <SearchBar
+            <SearchBar
               placeholder="Search birds..."
               onChangeText={handleSearch}
               value={query}
               lightTheme
               containerStyle={styles.searchBar}
-              inputContainerStyle={{padding: 12, backgroundColor: "transparent"}}
+              inputContainerStyle={{ padding: 12, backgroundColor: "transparent" }}
               platform="default"
             />
             {filteredBirds.map((bird: Bird, index: number) => (
-              <WikiLi bird={bird} key={bird.id}></WikiLi>
+              <WikiLi bird={bird} key={index}></WikiLi>
             ))}
           </ScrollView>
         </SafeAreaView>

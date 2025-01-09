@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 import * as SplashScreen from 'expo-splash-screen';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import {
   useFonts,
   Inter_100Thin,
@@ -38,9 +38,10 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{ 
-      headerShown: false,
-      contentStyle: {backgroundColor: "white"} 
+    <Stack screenOptions={{
+      headerShown: true,
+      title: 'Home',
+      contentStyle: { backgroundColor: "white" }
     }}>
       <Stack.Screen name="index" />
       <Stack.Screen name="+not-found" />
