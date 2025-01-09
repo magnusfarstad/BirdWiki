@@ -44,6 +44,8 @@ export default function RootLayout() {
       contentStyle: { backgroundColor: "white" }
     }}>
       <Stack.Screen name="index" />
+      <Stack.Screen name="wiki" options={{ title: 'Wiki', headerShown: false }} />
+      <Stack.Screen name="[bird]" options={{ title: 'Wiki', headerShown: false }} />
       <Stack.Screen name="+not-found" />
     </Stack>
   )

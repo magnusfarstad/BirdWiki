@@ -13,7 +13,7 @@ export default function Index() {
       }}
     >
       <Hero imgSource={hero} label="Vendehals" subHeader="Bird of the day" />
-      <Link style={styles.link} href="/wiki/home">Wiki</Link>
+      <Link style={styles.link} href="/wiki">Wiki</Link>
     </View>
   );
 }
