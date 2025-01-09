@@ -1,7 +1,6 @@
-# Welcome to your Expo app 👋
+# Bird Wiki 🕊️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
+A simple project made with React Expo. A wiki app for birds!
 ## Get started
 
 1. Install dependencies
